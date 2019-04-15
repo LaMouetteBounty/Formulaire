@@ -1,65 +1,103 @@
-fname = document.querySelector('#fname');
-lname = document.querySelector('#lname');
-email = document.querySelector('#mail');
-tel = document.querySelector('#tel');
-adresse = document.querySelector('#adresse');
-cp = document.querySelector('#cp');
-ville = document.querySelector('#ville');
-console.log("declaration des id")
+document.getElementById("formulaire").addEventListener("submit", function(e) {
 
-// function valider() {
-//     var x = document.forms["form"]["fname"].value;
-//     if (x == "") {
-//       alert("Name must be filled out");
-//       return false;
-//     }
-//   }
-//   console.log("valide fname")
-//   function valider() {
-//     var x = document.forms["form"]["lname"].value;
-//     if (x == "") {
-//       alert("Name must be filled out");
-//       return false;
-//     }
-//   }
-//   console.log("valide lname")
+    e.preventDefault();
+    console.log("declaration document - ligne 4");
+    var erreur;
 
-//   var email = document.getElementById("mail");
 
-// email.addEventListener("keyup", function () {
-//   if(email.validity.typeMismatch) {
-//     email.setCustomValidity("J'attend un e-mail, mon cher !.");
-//   } else {
-//     email.setCustomValidity("");
-//   }
-// });
+    var inputs = this.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++ ) {
+        if (!inputs[i].value) {
+            erreur = "Veuillez renseigner tout les champs";
+        }
+    }
+
+    if (erreur) {
+        e.preventDefault();
+        document.getElementById("erreur").innerHTML = erreur;
+        return false;
+    } else {
+alert('Formulaire envoyé !');
+    }
+});
+console.log("message d'erreur et validation - ligne 23");
+
+// *****************************************************************************************
+
+document.getElementById("fname").addEventListener("blur", myFunction);
+function myFunction() {
+  alert("Input field lost focus.");
+}
+
+document.getElementById("lname").addEventListener("blur", myFunction);
+function myFunction() {
+  alert("Input field lost focus.");
+}
+
+document.getElementById("email").addEventListener("blur", myFunction);
+function myFunction() {
+  alert("Input field lost focus.");
+}
+
+document.getElementById("tel").addEventListener("blur", myFunction);
+function myFunction() {
+  alert("Input field lost focus.");
+}
+
+document.getElementById("adresse").addEventListener("blur", myFunction);
+function myFunction() {
+  alert("Input field lost focus.");
+}
+
+document.getElementById("cp").addEventListener("blur", myFunction);
+function myFunction() {
+  alert("Input field lost focus.");
+}
+
+// document.getElementById("ville").addEventListener("blur", myFunction);
 // function myFunction() {
-//     var x, text;
-  
+//      // If x is Not a Number or less than one or greater than 10
+// if (fname > 0 || fname < Infinity) {
+// console.log("Nombre infini okaay")
+//   alert("Input field lost focus.");
+// }
+// else {
+//     alert('Formulaire envoyé !');
+// }
+// ******************************************************************************************
+    // var fname = document.getElementById("fname");
+    // var lname = document.getElementById("lname");
+    // var email = document.getElementById("email");
+    // console.log("declaration variable");
+ 
+    // if (!email.value) {
+    //     erreur = "Veuillez saisir votre email";
+    //     console.log("if email");
+    // }
+    // if (!lname.value) {
+    //     erreur = "Veuillez saisir votre prénom";
+    //     console.log("if last name");
+    // }
+    // if (!fname.value) {
+    //     erreur = "Veuillez saisir votre nom";
+    //     console.log("if first name");
+    // }
+    // *************************************************************************************
+// var fname = document.getElementById("fname");
+//   function fname() {
+//     var fname, text;
+//     console.log("fname");
 //     // Get the value of the input field with id="numb"
-//     x = document.getElementById("fname").value;
-  
+//     fname = document.querySelector("#fname").value;
 //     // If x is Not a Number or less than one or greater than 10
-//     if (isNaN(x) || x < 1 || x > 10) {
+//     if (fname > 0 || fname < Infinity) {
+//         console.log("Nombre infini okaay")
 //       text = "Veuillez saisir votre nom";
 //     } else {
-//       text = "OK";
+//       text = "Ok";
+      
 //     }
-//     document.getElementById("demo").innerHTML = text;
+//     document.querySelector(".txt").innerHTML = text;
 //   }
-
-  function myName() {
-    var x, text;
-  
-    // Get the value of the input field with id="numb"
-    x = document.getElementById("fname").value;
-  
-    // If x is Not a Number or less than one or greater than 10
-    if (event.keyCode < 46 || event.keyCode > 57) {
-        console.log(event.keyCode)
-      text = "Veuillez saisir votre nom";
-    } else {
-      text = "Ok";
-    }
-    document.querySelector(".txt").innerHTML = text;
-  }
+//   console.log("fname OK")
+//   ************************************************************************************
