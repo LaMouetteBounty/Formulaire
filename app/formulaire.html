@@ -15,21 +15,21 @@
         <aside>
             <form id="formulaire">
                 <span>Nom* :</span><br>
-                <input type="text" name="name" placeholder="Nom" id="fname"> <br><br>
+                <input onkeyup="verif_letter(this);" type="text" name="name" placeholder="Nom" id="fname"> <br><br>
                 <span>Prénom* :</span><br>
-                <input type="text" name="name" placeholder="Prénom" id="lname"><br><br>
+                <input  onkeyup="verif_letter(this);" type="text" name="name" placeholder="Prénom" id="lname"><br><br>
                 <span>Email* :</span><br>
-                <input type="email" name="email" placeholder="Email" id="email"><br><br>
+                <input  type="email" name="email" placeholder="Email" id="email"><br><br>
                 <span>Téléphone* :</span><br>
-                <input type="text" name="telephone" placeholder="N° de téléphone" id="tel"><br>
+                <input onkeyup="verif_nombre(this);" type="text" name="telephone" placeholder="N° de téléphone" id="tel"><br>
         </aside>
         <aside>
                 <span>Adresse* :</span>
             <input type="text" name="rue" placeholder="N° de rue" id="adresse"><br>
             <span>Code postal* :</span>
-            <input type="text" name="cp" placeholder="Code Postal" id="cp"><br>
+            <input onkeyup="verif_nombre(this);" type="text" name="cp" placeholder="Code Postal" id="cp"><br>
             <span>Ville* :</span>
-            <input type="text" name="ville" placeholder="Ville" id="ville"><br>
+            <input  onkeyup="verif_letter(this);" type="text" name="ville" placeholder="Ville" id="ville"><br>
            
             Message :
             <textarea></textarea>
