@@ -1,0 +1,27 @@
+body {
+    margin: 20%;
+    background-color: beige;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* p:valid {
+    color: green;
+}
+
+p:invalid {
+    color:red;
+    box-shadow: 0 0 5px 1px red;
+} */
+
+.txt {
+    font-size: 15px;
+    color: red;
+}
+section {
+    display: flex;
+    flex-direction: row;
+}
+aside {
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+}
