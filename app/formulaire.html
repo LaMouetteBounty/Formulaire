@@ -10,43 +10,44 @@
 </head>
 
 <body>
-    <!-- action="/formulaire.js" target="_blank" method="get" onkeyup="verif_letter(this);"onkeyup="verif_nombre(this);"-->
+    <!-- action="/formulaire.js" target="_blank" method="get" -->
     <h1>Mon Formulaire</h1>
     <section>
-        
-            <form id="formulaire"><div id="aside1">
+            <!-- onkeyup="verif_letter(this);"onkeyup="verif_nombre(this);" -->
+        <form id="formulaire">
+            <div id="aside1">
                 <label>Nom* :</label>
-                <input  type="text" name="name" placeholder="Nom" id="fname"> <br>
+                <input type="text" name="name" placeholder="Nom" id="fname"> <br>
                 <span id="errorfname"></span>
                 <label>Prénom* :</label>
                 <input type="text" name="name" placeholder="Prénom" id="lname"><br>
                 <span id="errorlname"></span>
                 <label>Email* :</label>
-                <input  type="email" name="email" placeholder="Email" id="email"><br>
+                <input type="email" name="email" placeholder="Email" id="email"><br>
                 <span id="erroremail"></span>
                 <label>Téléphone* :</label>
-                <input maxlength="10" type="text" name="telephone" placeholder="N° de téléphone" id="tel"><br>
+                <input maxlength="14" type="text" name="telephone" placeholder="N° de téléphone" id="tel"><br>
                 <span id="errortel"></span>
             </div>
-        <div id="aside2">
-            <label>Adresse* :</label>
-            <input type="text" name="rue" placeholder="N° de rue" id="adresse"><br>
-            <span id="erroradresse"></span>
-            <label>Code postal* :</label>
-            <input maxlength="5" type="text" name="cp" placeholder="Code Postal" id="cp"><br>
-            <span id="errorcp"></span>
-            <label>Ville* :</label>
-            <input type="text"   name="ville" placeholder="Ville" id="ville"><br>
-            <span id="errorville"></span>
-            <label>Message :</label>
-            <textarea id="message"></textarea>
-            <span id="errormessage"></span>
-            <br><br></div>
+            <div id="aside2">
+                <label>Adresse* :</label>
+                <input type="text" name="rue" placeholder="N° de rue" id="adresse"><br>
+                <span id="erroradresse"></span>
+                <label>Code postal* :</label>
+                <input type="text" name="cp" placeholder="Code Postal" id="cp"><br>
+                <span id="errorcp"></span>
+                <label>Ville* :</label>
+                <input type="text" name="ville" placeholder="Ville" id="ville"><br>
+                <span id="errorville"></span>
+                <label>Message* :</label>
+                <textarea id="message"></textarea>
+                <span id="errormessage"></span>
+                <br><br></div>
             <input type="submit" id="submit" value="inscription">
             <p id="erreur"></p>
             <p id="legende">*champs obligatoires</p>
         </form>
-        
+
     </section>
     <script type="text/javascript" src="formulaire.js"></script>
 </body>
